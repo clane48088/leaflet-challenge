@@ -33,7 +33,7 @@ let basemap = L.tileLayer(
 
  // make basemap object
  let basemaps = {
-    Default: basemap,
+    Default: grayscale,
     GrayScale: grayscale,
     "Water Color": waterColor,
     "Topography": topoMap,
@@ -193,7 +193,9 @@ let basemap = L.tileLayer(
               + colors[i]
               + "'></i> "
               + intervals[i] // selects the text
-              + (intervals [i + 1] ? "km &ndash km;" + intervals[i + 1] + "km<br>" : "+");
+              + (intervals [i + 1] ? "&ndash;"  + intervals[i + 1] + "<br>" : "+");
+              // + (intervals [i + 1] ? "km &ndash km;" + intervals[i + 1] + "km<br>" : "+");
+
       }
 
       return div;
